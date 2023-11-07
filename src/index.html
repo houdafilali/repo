@@ -1,0 +1,24 @@
+<!doctype html>
+<header>
+ <script>
+ async function getHelloMessage() {
+ try {
+        const inputField = document.getElementById('userInput'); // Récupère la valeur de l'input
+        const inputValue = inputField.value;
+
+        if (inputValue) {
+          const helloMessage = { "hello": inputValue };
+          alert(JSON.stringify(helloMessage));
+        } else {
+          alert('Veuillez entrer une valeur dans le champ.');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+ </script>
+</header>
+ <body>
+  <input type="text" id="userInput" placeholder="Entrez votre valeur">
+  <button onclick="getHelloMessage()">Cliquez ici</button>
+</body>
